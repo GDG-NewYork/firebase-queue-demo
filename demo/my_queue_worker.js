@@ -13,7 +13,7 @@ firebase.initializeApp({
 var ref = firebase.database().ref('queue');
 var queue = new Queue(ref, function(data, progress, resolve, reject) {
     // Read and process task data
-    console.log(data);
+    console.log('>>>>>DATA',data);
 
     // Do some work
     progress(50);
