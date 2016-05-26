@@ -72,7 +72,7 @@
     // Using the web JavaScript client
     //var ref = firebase.database().ref('queue/tasks');
     var ref = new Firebase("https://fir-queue.firebaseio.com/queue/tasks");
-    ref.push({'foo': 'bar'});
+    ref.push({'foo': 'bar'+new Date().getTime()});
     }
     </script>
   </body>
