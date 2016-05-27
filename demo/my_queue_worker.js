@@ -17,6 +17,7 @@ var queue = new Queue(ref, function(data, progress, resolve, reject) {
 
     // Do some work
     progress(50);
+    // state look for multi state step  schema define the json structure.
 
     // Finish the task asynchronously
     setTimeout(function() {
