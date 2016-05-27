@@ -64,15 +64,18 @@
       <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
       <ul>
         <li><a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a></li>
-        <button onclick="push()">Write to Queue</button>
+        <input id="input1" value="bar"/>
+        <button onclick="push(document.querySelector('#input1').value)">Write to Queue</button>
       </ul>
     </div>
     <script>
-    function push(){
+    function push(value){
     // Using the web JavaScript client
     //var ref = firebase.database().ref('queue/tasks');
     var ref = new Firebase("https://fir-queue.firebaseio.com/queue/tasks");
-    ref.push({'foo': 'bar'+new Date().getTime()});
+    //ref.push({'foo': 'bar'});
+    ref.push({'foo': value+new Date().getTime()});
+    //ref.push({'foo': 'bar'+new Date().getTime()});
     }
     </script>
   </body>
